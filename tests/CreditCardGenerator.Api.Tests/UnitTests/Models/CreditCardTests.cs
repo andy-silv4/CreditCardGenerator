@@ -23,7 +23,7 @@ namespace CreditCardGenerator.Api.Tests.Models
             var valid = creditCard.isValid();
 
             // Assert
-            Assert.False(valid);
+            Assert.True(valid);
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace CreditCardGenerator.Api.Tests.Models
             var invalid = creditCard.isValid();
 
             // Assert
-            Assert.True(invalid);
+            Assert.False(invalid);
         }
     }
 }
