@@ -1,4 +1,4 @@
-name: ASP.Net MVC Core
+name: .NET Core WebApi
 
 on: [push]
 
