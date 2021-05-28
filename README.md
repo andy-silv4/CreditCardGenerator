@@ -10,6 +10,6 @@ cd .\CreditCardGenerator\src\CreditCardGenerator.Api\
 dotnet run
 ```
 
-#### Accesse no browser
+#### Acesse no browser
 https://localhost:5001/swagger
 
