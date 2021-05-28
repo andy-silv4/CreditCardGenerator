@@ -4,7 +4,7 @@ Existem vários tutoriais na internet de como fazer isso, eu sei. O desenvolvime
 
 Para criar uma API só é preciso ter conhecimentos intermediários sobre o protocolo HTTP, servidores web e uma linguagem de programação para web. Utilizando frameworks como o .NET Core essa tarefa parece ainda mais "simples". Será?
 
-Nesse post vou tentar dar o meu ponto de vista para criação de APIs REST, explicar um pouco alguns conceitos básicos e por fim desenvolver uma API de exemplo para geração de números de cartão de crédito.
+Nesse post vou tentar dar o meu ponto de vista sobre a criação de APIs REST, explicar um pouco alguns conceitos básicos e por fim desenvolver uma API de exemplo para geração de números de cartão de crédito.
 
 ## REST
 
@@ -87,7 +87,7 @@ Após o tutorial, você deverá ter:
 - Configurado o roteamento, os caminhos de URL e os valores retornados.
 - Realizado testes da API Web com o Postman.
 
-Utilizaremos também o Entity Framework. É ele que permite o acesso ao banco de dados usando um modelo. Um modelo é criado a partir das classes de entidade e um objeto de contexto que representa uma sessão com o banco de dados. Assim podemos consultar e salvar dados. É possível ainda utilizar de migrações para criar tabelas com base no modelo, possibilitando a evolução do banco de dados conforme o modelo muda. Para nosso caso estou usando um único modelo, apenas representativo e para atender a necessidade da API. Em casos mais elaborados, o correto é definir bem as classes de modelo, mantendo nelas apenas as informações pertinentes à ela. Quanto ao EF então, vou usar o banco de dados em mémoria para facilitar o desenvolviemnto.
+Utilizaremos também o Entity Framework. É ele que permite o acesso ao banco de dados usando um modelo. Um modelo é criado a partir das classes de entidade e um objeto de contexto que representa uma sessão com o banco de dados. Assim podemos consultar e salvar dados. É possível ainda utilizar de migrações para criar tabelas com base no modelo, possibilitando a evolução do banco de dados conforme o modelo muda. Para nosso caso estou usando um único modelo, apenas representativo e para atender a necessidade da API. Em casos mais elaborados, o correto é definir bem as classes de modelo, mantendo nelas apenas as informações pertinentes à ela. Quanto ao EF então, vou usar o banco de dados em mémoria para facilitar o desenvolvimento.
 
 Com a aplicação criada vamos dar continuidade ao nosso projeto. Como dito antes, nossa API é um serviço que irá gerar números aleatórios de cartão de crédito. Vamos aproveitar então e editar a classe *TodoItem* do último tutorial substituindo pela nossa classe de cartão de crédito:
 
@@ -321,7 +321,7 @@ Já vou começar a conclusão dizendo que o tutorial é muito simples, se compar
 
 - O usuário pode agora visualizar todos os cartões gerados realizando uma solicitação GET para o recurso /api/credicards, informando também seu e-mail.
 
-  Uma API REST deve possuir uma documentação bem definida. Utilizando de ferramentas como o *Swagger*, podemos criar documentações que irão ajudar as equipes de desenvolvimento a se entenderem, onde equipes de frontend podem acessar os endpoints facilmente e consumir os recursos disponíveis corretamente.
+  Uma API REST deve possuir uma documentação bem definida. Utilizando de ferramentas como o *Swagger*, podemos criar documentações que irão ajudar as equipes de desenvolvimento a se entenderem, onde equipes de frontend podem acessar os endpoints facilmente e consumir os recursos disponíveis corretamente. Lembrando também que devemos nos atentar bem aos [códigos de status de respostas HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).
 
 Complementando a aplicação desenvolvida nesse post, tentei seguir as recomendações descritas acima para melhorar a aplicação. Os código da aplicação completa estão disponíveis no [github](https://github.com/andy-silv4/CreditCardGenerator).
 
