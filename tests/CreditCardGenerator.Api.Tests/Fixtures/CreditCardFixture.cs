@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CreditCardGeneratorAPI.Models;
+using CreditCardGenerator.Api.Models;
 using Xunit;
 
-namespace CreditCardGeneratorAPITest.Fixtures
+namespace CreditCardGenerator.Api.Tests.Fixtures
 {
     [CollectionDefinition(nameof(CreditCardCollection))]
     public class CreditCardCollection : ICollectionFixture<CreditCardFixture>
