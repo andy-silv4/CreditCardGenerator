@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CreditCardGenerator.Api.Data;
+using CreditCardGenerator.Api.Data.Repositories;
+using CreditCardGenerator.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace CreditCardGenerator.Api
 {
@@ -25,7 +22,14 @@ namespace CreditCardGenerator.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApiDbContext>(options =>
+                options.UseInMemoryDatabase("CreditCardGenerator")
+            );
+
             services.AddControllers();
+            
+            services.AddScoped<ICreditCardService, CreditCardService>();
+            services.AddScoped<ICreditCardRepository, CreditCardRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
