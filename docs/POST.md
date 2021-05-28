@@ -87,7 +87,9 @@ Após o tutorial, você deverá ter:
 - Configurado o roteamento, os caminhos de URL e os valores retornados.
 - Realizado testes da API Web com o Postman.
 
-Com essa aplicação criada vamos dar continuidade ao nosso projeto. Como dito antes, nossa API é um serviço que irá gerar números aleatórios de cartão de crédito. Vamos aproveitar então e editar a classe *TodoItem* do último tutorial substituindo pela nossa classe de cartão de crédito:
+Utilizaremos também o Entity Framework. É ele que permite o acesso ao banco de dados usando um modelo. Um modelo é criado a partir das classes de entidade e um objeto de contexto que representa uma sessão com o banco de dados. Assim podemos consultar e salvar dados. É possível ainda utilizar de migrações para criar tabelas com base no modelo, possibilitando a evolução do banco de dados conforme o modelo muda. Para nosso caso estou usando um único modelo, apenas representativo e para atender a necessidade da API. Em casos mais elaborados, o correto é definir bem as classes de modelo, mantendo nelas apenas as informações pertinentes à ela. Quanto ao EF então, vou usar o banco de dados em mémoria para facilitar o desenvolviemnto.
+
+Com a aplicação criada vamos dar continuidade ao nosso projeto. Como dito antes, nossa API é um serviço que irá gerar números aleatórios de cartão de crédito. Vamos aproveitar então e editar a classe *TodoItem* do último tutorial substituindo pela nossa classe de cartão de crédito:
 
 ```c#
 using System;
