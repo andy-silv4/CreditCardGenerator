@@ -1,7 +1,7 @@
 using CreditCardGenerator.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CreditCardGeneratorAPI.Data
+namespace CreditCardGenerator.Api.Data
 {
     public class ApiDbContext : DbContext
     {
