@@ -1,5 +1,6 @@
 using CreditCardGenerator.Api.Data;
 using CreditCardGenerator.Api.Data.Repositories;
+using CreditCardGenerator.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ namespace CreditCardGenerator.Api
 
             services.AddControllers();
             
+            services.AddScoped<ICreditCardService, CreditCardService>();
             services.AddScoped<ICreditCardRepository, CreditCardRepository>();
         }
 
